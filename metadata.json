@@ -1,0 +1,7 @@
+{
+  "name": "安陆市辛榨乡高标准农田信息化平台",
+  "description": "一个集成驾驶舱、园区管理、农事管理、无人农机、大数据分析及技术咨询的高标准农田信息化综合管理平台原型。",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
