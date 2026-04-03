@@ -24,7 +24,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ activeItem, onShow
       { label: '高标准农田面积', value: '2.0', unit: '万亩', change: '↑ 覆盖全乡 82.4%', icon: '🌾', color: 'text-accent-main' },
       { label: '本季在种面积', value: '1.86', unit: '万亩', change: '↑ 较上季 +4.2%', icon: '📦', color: 'text-accent-main' },
       { label: '今日累计产量', value: '1,254', unit: '吨', change: '↑ 同比 +8.3%', icon: '🌱', color: 'text-accent-main' },
-      { label: '在线农机台数', value: '12', unit: '台', change: '3台作业 · 9台待机', icon: '🚜', color: 'text-accent-main' },
+      { label: '在线农机台数', value: '1', unit: '台', change: '0台作业 · 1台待机', icon: '🚜', color: 'text-accent-main' },
       { label: '传感器在线率', value: '94.7', unit: '%', change: '↓ 3 台离线告警', icon: '📡', color: 'text-accent-main' },
       { label: '今日告警数', value: '7', unit: '条', change: '↑ 较昨日 +2', icon: '⚠️', color: 'text-accent-yellow' },
     ];
