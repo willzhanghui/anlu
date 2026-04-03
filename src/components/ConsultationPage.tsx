@@ -98,9 +98,9 @@ export const ConsultationPage: React.FC<ConsultationPageProps> = ({ activeItem }
           </div>
           <div className="p-2 space-y-2 overflow-y-auto flex-1">
             {[
-              { user: '张大伯 (西河村)', preview: '我家水稻叶子发黄是怎么回事？', time: '10:32', unread: true, type: '病虫害' },
-              { user: '李四 (孙汪村)', preview: '无人机喷洒药剂浓度怎么调？', time: '昨天', unread: false, type: '农机' },
-              { user: '王五 (张付村)', preview: '最近的补贴政策在哪里看？', time: '2026-03-30', unread: false, type: '政策' },
+              { user: '张大伯 (下陈塆村)', preview: '我家水稻叶子发黄是怎么回事？', time: '10:32', unread: true, type: '病虫害' },
+              { user: '李四 (下陈塆村)', preview: '无人机喷洒药剂浓度怎么调？', time: '昨天', unread: false, type: '农机' },
+              { user: '王五 (下陈塆村)', preview: '最近的补贴政策在哪里看？', time: '2026-03-30', unread: false, type: '政策' },
             ].map((chat, i) => (
               <div 
                 key={i} 
@@ -129,7 +129,7 @@ export const ConsultationPage: React.FC<ConsultationPageProps> = ({ activeItem }
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-accent-main/20 flex items-center justify-center text-accent-main font-bold text-xs">张</div>
               <div>
-                <div className="text-xs font-bold text-text-primary">张大伯 (西河村)</div>
+                <div className="text-xs font-bold text-text-primary">张大伯 (下陈塆村)</div>
                 <div className="text-[9px] text-accent-green flex items-center gap-1">
                   <CheckCircle2 size={8} /> 智能路由：已分配至 华农-李教授
                 </div>
@@ -148,7 +148,7 @@ export const ConsultationPage: React.FC<ConsultationPageProps> = ({ activeItem }
               <div className="w-8 h-8 rounded-full bg-accent-main/20 flex-shrink-0 flex items-center justify-center text-accent-main font-bold text-xs">张</div>
               <div className="space-y-2 max-w-[80%]">
                 <div className="p-3 rounded-2xl rounded-tl-none bg-bg-panel border border-border-main text-xs text-text-secondary leading-relaxed">
-                  李教授您好，我家西河村A区的水稻，最近发现叶尖有点发黄，您帮我看看是怎么回事？
+                  李教授您好，我家下陈塆村A区的水稻，最近发现叶尖有点发黄，您帮我看看是怎么回事？
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <div className="aspect-square bg-bg-panel rounded-lg border border-border-main overflow-hidden group relative">
@@ -312,7 +312,7 @@ export const ConsultationPage: React.FC<ConsultationPageProps> = ({ activeItem }
           <div className="panel-header mb-4"><div className="panel-title">待办问题与服务评价管理</div></div>
           <div className="space-y-3">
             {[
-              { type: '待办', title: '西河村A区水稻叶尖发黄诊断', time: '10分钟前', user: '张大伯' },
+              { type: '待办', title: '下陈塆村A区水稻叶尖发黄诊断', time: '10分钟前', user: '张大伯' },
               { type: '评价', title: '“李教授讲解非常细致，解决了我的大难题！”', time: '1小时前', user: '李四', score: 5 },
             ].map((item, i) => (
               <div key={i} className="p-3 rounded bg-bg-panel border border-border-main flex justify-between items-start">

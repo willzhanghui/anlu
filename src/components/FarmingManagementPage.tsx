@@ -21,10 +21,10 @@ export const FarmingManagementPage: React.FC<FarmingManagementPageProps> = ({ ac
   // --- 1. 作业任务 (Tasks) ---
   const TasksContent = () => {
     const tasks = [
-      { id: 'T20260402-01', title: '西河村A区机械插秧', type: '播种', person: '张建国', time: '2026-04-02 08:00', status: '进行中', priority: '高' },
-      { id: 'T20260402-02', title: '孙汪村2号地块纹枯病防治', type: '植保', person: '李明', time: '2026-04-02 09:30', status: '待执行', priority: '紧急' },
-      { id: 'T20260402-03', title: '全乡土壤墒情巡检', type: '巡检', person: '王芳', time: '2026-04-02 10:00', status: '待执行', priority: '中' },
-      { id: 'T20260401-05', title: '四报村灌溉系统维护', type: '维护', person: '赵勇', time: '2026-04-01 14:00', status: '已完成', priority: '低' },
+      { id: 'T20260402-01', title: '下陈塆村A区机械插秧', type: '播种', person: '张建国', time: '2026-04-02 08:00', status: '进行中', priority: '高' },
+      { id: 'T20260402-02', title: '下陈塆村2号地块纹枯病防治', type: '植保', person: '李明', time: '2026-04-02 09:30', status: '待执行', priority: '紧急' },
+      { id: 'T20260402-03', title: '下陈塆村全域土壤墒情巡检', type: '巡检', person: '王芳', time: '2026-04-02 10:00', status: '待执行', priority: '中' },
+      { id: 'T20260401-05', title: '下陈塆村灌溉系统维护', type: '维护', person: '赵勇', time: '2026-04-01 14:00', status: '已完成', priority: '低' },
     ];
 
     return (
@@ -111,9 +111,9 @@ export const FarmingManagementPage: React.FC<FarmingManagementPageProps> = ({ ac
   // --- 2. 批次管理 (Batch) ---
   const BatchContent = () => {
     const batches = [
-      { id: 'B2026-008', crop: '早稻(鄂中5号)', field: '西河村A区', date: '2026-03-20', area: '1,200', status: '在种', progress: 15, yield: 0 },
-      { id: 'B2026-007', crop: '油菜(华油杂62)', field: '孙汪村全部', date: '2025-10-08', area: '580', status: '收割中', progress: 90, yield: 124 },
-      { id: 'B2026-006', crop: '小麦(郑麦379)', field: '辛榨社区', date: '2025-11-02', area: '920', status: '在种', progress: 65, yield: 0 },
+      { id: 'B2026-008', crop: '早稻(鄂中5号)', field: '下陈塆村A区', date: '2026-03-20', area: '1,200', status: '在种', progress: 15, yield: 0 },
+      { id: 'B2026-007', crop: '油菜(华油杂62)', field: '下陈塆村核心区', date: '2025-10-08', area: '580', status: '收割中', progress: 90, yield: 124 },
+      { id: 'B2026-006', crop: '小麦(郑麦379)', field: '下陈塆村辐射区', date: '2025-11-02', area: '920', status: '在种', progress: 65, yield: 0 },
     ];
 
     return (
@@ -253,8 +253,8 @@ export const FarmingManagementPage: React.FC<FarmingManagementPageProps> = ({ ac
           <div className="panel-title text-xs mb-3">农资销售流水追溯</div>
           <div className="space-y-2">
             {[
-              { id: 'S20260402-102', buyer: '西河村合作社', item: '尿素 (40kg)', qty: '50袋', time: '10:15' },
-              { id: 'S20260402-101', buyer: '孙汪村种植大户', item: '复合肥 (50kg)', qty: '120袋', time: '09:45' },
+              { id: 'S20260402-102', buyer: '下陈塆村合作社', item: '尿素 (40kg)', qty: '50袋', time: '10:15' },
+              { id: 'S20260402-101', buyer: '下陈塆村种植大户', item: '复合肥 (50kg)', qty: '120袋', time: '09:45' },
             ].map((sale, i) => (
               <div key={i} className="flex items-center justify-between p-2 bg-bg-panel rounded border border-border-main text-[10px] hover:border-accent-main transition-colors cursor-pointer">
                 <div className="flex gap-4">
@@ -334,10 +334,10 @@ export const FarmingManagementPage: React.FC<FarmingManagementPageProps> = ({ ac
             </thead>
             <tbody className="divide-y divide-border-main/20">
               {[
-                { name: '气象监测主站', model: 'WS-PRO-V3', loc: '西河村委', time: '1分钟前', status: '在线', color: 'text-accent-green' },
-                { name: '土壤墒情传感器', model: 'SM-100', loc: '孙汪村2号地块', time: '5分钟前', status: '在线', color: 'text-accent-green' },
-                { name: '虫情识别仪', model: 'IC-AI-01', loc: '辛榨社区', time: '12分钟前', status: '离线', color: 'text-accent-red' },
-                { name: '水位监测计', model: 'WL-80', loc: '张付村水渠', time: '2小时前', status: '故障', color: 'text-accent-yellow' },
+                { name: '气象监测主站', model: 'WS-PRO-V3', loc: '下陈塆村委', time: '1分钟前', status: '在线', color: 'text-accent-green' },
+                { name: '土壤墒情传感器', model: 'SM-100', loc: '下陈塆村2号地块', time: '5分钟前', status: '在线', color: 'text-accent-green' },
+                { name: '虫情识别仪', model: 'IC-AI-01', loc: '下陈塆村核心区', time: '12分钟前', status: '离线', color: 'text-accent-red' },
+                { name: '水位监测计', model: 'WL-80', loc: '下陈塆村水渠', time: '2小时前', status: '故障', color: 'text-accent-yellow' },
               ].map((item, i) => (
                 <tr key={i} className="hover:bg-accent-main/5 text-text-secondary group transition-colors">
                   <td className="p-3 font-bold text-text-primary group-hover:text-accent-main transition-colors">{item.name}</td>
@@ -577,9 +577,9 @@ export const FarmingManagementPage: React.FC<FarmingManagementPageProps> = ({ ac
             </thead>
             <tbody className="divide-y divide-border-main/20">
               {[
-                { name: '安陆市金穗农机专业合作社', type: '合作社', person: '刘金穗', fields: '西河村、孙汪村', status: '已审核' },
-                { name: '辛榨乡现代农业示范场', type: '农场', person: '陈示范', fields: '辛榨社区', status: '已审核' },
-                { name: '张付村种粮大户-老王', type: '种植户', person: '王大户', fields: '张付村', status: '审核中' },
+                { name: '安陆市金穗农机专业合作社', type: '合作社', person: '刘金穗', fields: '下陈塆村', status: '已审核' },
+                { name: '辛榨乡现代农业示范场', type: '农场', person: '陈示范', fields: '下陈塆村', status: '已审核' },
+                { name: '下陈塆村种粮大户-老王', type: '种植户', person: '王大户', fields: '下陈塆村', status: '审核中' },
               ].map((item, i) => (
                 <tr key={i} className="hover:bg-accent-main/5 text-text-secondary group transition-colors">
                   <td className="p-3 font-bold text-text-primary group-hover:text-accent-main transition-colors">{item.name}</td>

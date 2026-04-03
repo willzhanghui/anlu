@@ -97,7 +97,7 @@ export const BigDataPage: React.FC<BigDataPageProps> = ({ activeItem }) => {
                 <span className="text-[11px] font-bold">知识推理输出</span>
               </div>
               <p className="text-[10px] text-text-secondary leading-relaxed">
-                检测到西河村3号地块有机质含量偏低（22.4g/kg），建议在下个播种季前增加绿肥种植或增施腐熟有机肥 500kg/亩。
+                检测到下陈塆村3号地块有机质含量偏低（22.4g/kg），建议在下个播种季前增加绿肥种植或增施腐熟有机肥 500kg/亩。
               </p>
             </div>
             <div className="space-y-2">
@@ -256,10 +256,10 @@ export const BigDataPage: React.FC<BigDataPageProps> = ({ activeItem }) => {
           </thead>
           <tbody className="divide-y divide-border-main/20">
             {[
-              { name: '鄂中5号', id: '鄂审稻2019006', type: '早稻', period: 112, yield: 520, res: '抗稻瘟', area: '西河村', total: '1,200亩' },
-              { name: '武运粳27', id: '国审稻2019022', type: '晚稻', period: 128, yield: 580, res: '高抗白叶枯', area: '孙汪村', total: '6,800亩' },
-              { name: '郑麦379', id: '国审麦2018005', type: '冬小麦', period: 220, yield: 520, res: '中抗赤霉', area: '张付村', total: '920亩' },
-              { name: '华油杂62', id: '鄂审油2016002', type: '油菜', period: 188, yield: 192, res: '强抗倒伏', area: '辛榨社区', total: '580亩' },
+              { name: '鄂中5号', id: '鄂审稻2019006', type: '早稻', period: 112, yield: 520, res: '抗稻瘟', area: '下陈塆村', total: '1,200亩' },
+              { name: '武运粳27', id: '国审稻2019022', type: '晚稻', period: 128, yield: 580, res: '高抗白叶枯', area: '下陈塆村', total: '6,800亩' },
+              { name: '郑麦379', id: '国审麦2018005', type: '冬小麦', period: 220, yield: 520, res: '中抗赤霉', area: '下陈塆村', total: '920亩' },
+              { name: '华油杂62', id: '鄂审油2016002', type: '油菜', period: 188, yield: 192, res: '强抗倒伏', area: '下陈塆村', total: '580亩' },
               { name: '两优688', id: '国审稻2020015', type: '中稻', period: 135, yield: 650, res: '耐高温', area: '全乡推广', total: '2,400亩' },
             ].map((row, i) => (
               <tr key={i} className="hover:bg-accent-main/5 text-text-secondary group transition-colors">

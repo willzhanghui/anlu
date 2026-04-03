@@ -21,12 +21,12 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ activeItem, onShow
   // --- 1. 综合概览 (Overview) ---
   const OverviewContent = () => {
     const kpis = [
-      { label: '高标准农田面积', value: '2.0', unit: '万亩', change: '↑ 覆盖全乡 82.4%', icon: '🌾', color: 'text-accent-main' },
-      { label: '本季在种面积', value: '1.86', unit: '万亩', change: '↑ 较上季 +4.2%', icon: '📦', color: 'text-accent-main' },
-      { label: '今日累计产量', value: '1,254', unit: '吨', change: '↑ 同比 +8.3%', icon: '🌱', color: 'text-accent-main' },
-      { label: '在线农机台数', value: '1', unit: '台', change: '0台作业 · 1台待机', icon: '🚜', color: 'text-accent-main' },
-      { label: '传感器在线率', value: '94.7', unit: '%', change: '↓ 3 台离线告警', icon: '📡', color: 'text-accent-main' },
-      { label: '今日告警数', value: '7', unit: '条', change: '↑ 较昨日 +2', icon: '⚠️', color: 'text-accent-yellow' },
+      { label: '高标准农田总规模', value: '2500', unit: '亩', change: '核心区 500亩 · 辐射 2000亩', icon: '🌾', color: 'text-accent-main' },
+      { label: '项目总投资', value: '824', unit: '万元', change: '智慧农田投资 472万', icon: '💰', color: 'text-accent-main' },
+      { label: '粮食产能提升', value: '18.5', unit: '%', change: '↑ 目标 15%-20%', icon: '📈', color: 'text-accent-green' },
+      { label: '节水效率', value: '32', unit: '%', change: '↑ 目标 >30%', icon: '💧', color: 'text-accent-green' },
+      { label: '农机化作业率', value: '85', unit: '%', change: '↑ 较传统提升 25%', icon: '🚜', color: 'text-accent-main' },
+      { label: '农药化肥减量', value: '12.5', unit: '%', change: '↓ 目标 10%-15%', icon: '🧪', color: 'text-accent-green' },
     ];
 
     const yieldData = [
@@ -65,10 +65,10 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ activeItem, onShow
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 panel">
             <div className="panel-header">
-              <div className="panel-title">地块分布总览地图 · 辛榨乡</div>
+              <div className="panel-title">地块分布总览地图 · 辛榨乡下陈塆村</div>
               <div className="flex gap-2">
-                <span className="px-2 py-0.5 rounded bg-accent-main/20 text-accent-main text-[10px]">卫星图</span>
-                <span className="px-2 py-0.5 rounded bg-accent-green/20 text-accent-green text-[10px]">实时</span>
+                <span className="px-2 py-0.5 rounded bg-accent-main/20 text-accent-main text-[10px]">智慧农田核心区</span>
+                <span className="px-2 py-0.5 rounded bg-accent-green/20 text-accent-green text-[10px]">实时监控</span>
               </div>
             </div>
             <div className="p-2">
@@ -79,9 +79,9 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ activeItem, onShow
                   <polygon points="290,55 370,60 380,120 310,140 280,105" fill="rgba(0,212,255,0.07)" stroke="rgba(0,212,255,0.25)" strokeWidth="1.5"/>
                   <polygon points="80,150 170,140 190,200 120,220 70,190" fill="rgba(255,184,0,0.06)" stroke="rgba(255,184,0,0.25)" strokeWidth="1.5"/>
                   <path d="M0,200 Q100,185 200,195 Q300,205 400,190 Q450,185 500,188" fill="none" stroke="rgba(0,150,255,0.4)" strokeWidth="3"/>
-                  <text x="90" y="110" fill="rgba(200,230,255,0.7)" fontSize="11">西河村</text>
-                  <text x="195" y="90" fill="rgba(0,232,122,0.8)" fontSize="11">辛榨社区</text>
-                  <text x="300" y="92" fill="rgba(200,230,255,0.7)" fontSize="11">孙汪村</text>
+                  <text x="90" y="110" fill="rgba(200,230,255,0.7)" fontSize="11">下陈塆村核心区</text>
+                  <text x="195" y="90" fill="rgba(0,232,122,0.8)" fontSize="11">智慧农田示范片</text>
+                  <text x="300" y="92" fill="rgba(200,230,255,0.7)" fontSize="11">辐射带动区</text>
                 </svg>
                 <div className="absolute left-[18%] top-[35%] w-2.5 h-2.5 bg-accent-green rounded-full shadow-[0_0_8px_#00ff9d] animate-pulse" />
                 <div className="absolute left-[45%] top-[28%] w-2.5 h-2.5 bg-accent-green rounded-full shadow-[0_0_8px_#00ff9d] animate-pulse" />
@@ -99,8 +99,8 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ activeItem, onShow
               <div className="p-3 space-y-2">
                 {[
                   { id: 'alert1', icon: '🌧️', title: '气象预警：中雨预报', desc: '今日14:00–18:00，降雨量预计8–15mm', time: '14:28', type: 'red' },
-                  { id: 'alert2', icon: '🐛', title: '纹枯病风险：孙汪村2号地块', desc: 'NDVI异常下降，识别置信度 87%', time: '13:45', type: 'yellow' },
-                  { id: 'alert3', icon: '🔋', title: '传感器低电量：SM-07', desc: '西河村C区土壤墒情传感器电量 14%', time: '12:10', type: 'yellow' },
+                  { id: 'alert2', icon: '🐛', title: '纹枯病风险：下陈塆村2号地块', desc: 'NDVI异常下降，识别置信度 87%', time: '13:45', type: 'yellow' },
+                  { id: 'alert3', icon: '🔋', title: '传感器低电量：SM-07', desc: '下陈塆村C区土壤墒情传感器电量 14%', time: '12:10', type: 'yellow' },
                 ].map((alert, i) => (
                   <div key={i} onClick={() => onShowAlert(alert.id)} className={cn(
                     "flex gap-3 p-2.5 rounded-md border-l-3 cursor-pointer transition-all hover:brightness-110",
@@ -367,10 +367,11 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ activeItem, onShow
             <div className="panel-header"><div className="panel-title">设备在线状态</div></div>
             <div className="p-4 space-y-3">
               {[
-                { label: '土壤墒情仪', total: 42, online: 38, color: 'text-accent-green' },
-                { label: '气象站', total: 6, online: 6, color: 'text-accent-green' },
-                { label: '智能摄像头', total: 12, online: 10, color: 'text-accent-yellow' },
-                { label: '虫情灯', total: 8, online: 7, color: 'text-accent-green' },
+                { label: '土壤墒情监测站', total: 15, online: 15, color: 'text-accent-green' },
+                { label: '管式土壤墒情仪', total: 10, online: 10, color: 'text-accent-green' },
+                { label: '小型气象站', total: 1, online: 1, color: 'text-accent-green' },
+                { label: '智能控制水闸', total: 4, online: 4, color: 'text-accent-green' },
+                { label: '手动控水闸', total: 21, online: 21, color: 'text-accent-green' },
               ].map((item, i) => (
                 <div key={i} className="flex items-center justify-between p-2 bg-bg-deep rounded border border-border-main">
                   <div className="text-xs text-text-secondary">{item.label}</div>
@@ -695,13 +696,13 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ activeItem, onShow
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-lg font-bold">
-            {activeItem === 'dash-overview' && '综合驾驶舱 · 辛榨乡片区'}
-            {activeItem === 'dash-map' && '地图总览 · 辛榨乡数字化农田'}
+            {activeItem === 'dash-overview' && '综合驾驶舱 · 下陈塆村试点项目'}
+            {activeItem === 'dash-map' && '地图总览 · 下陈塆村数字化农田'}
             {activeItem === 'dash-alert' && '告警中心 · 实时监测预警'}
             {activeItem === 'dash-stats' && '数据统计 · 运行绩效分析'}
           </h1>
           <p className="text-xs text-text-dim mt-1">
-            {activeItem === 'dash-overview' && '安陆市 / 辛榨乡 / 西河村 · 孙汪村 · 辛榨社区 | 高标准农田建设总面积 20,000 亩'}
+            {activeItem === 'dash-overview' && '安陆市 / 辛榨乡 / 下陈塆村 | 智慧农田核心区 500 亩 · 辐射带动 2000 亩'}
             {activeItem === 'dash-map' && '基于高精度遥感与物联网传感器的全域数字化农田动态地图'}
             {activeItem === 'dash-alert' && '全天候实时监测气象、病虫害、设备状态及农事违规行为'}
             {activeItem === 'dash-stats' && '全乡农田建设、农事作业及资源投入的综合数据统计与绩效评估'}

@@ -139,8 +139,8 @@ export const MachineManagementPage: React.FC<MachineManagementPageProps> = ({ ac
         </div>
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
           {[
-            { name: 'XZ-001 无人插秧机', status: '作业中', area: '124.5亩', fuel: '68%', speed: '3.8km/h', loc: '西河村A区' },
-            { name: 'XZ-007 无人植保机', status: '作业中', area: '86.2亩', fuel: '42%', speed: '8.2m/s', loc: '孙汪村2号地' },
+            { name: 'XZ-001 无人插秧机', status: '作业中', area: '124.5亩', fuel: '68%', speed: '3.8km/h', loc: '下陈塆村A区' },
+            { name: 'XZ-007 无人植保机', status: '作业中', area: '86.2亩', fuel: '42%', speed: '8.2m/s', loc: '下陈塆村2号地' },
             { name: 'XZ-003 无人收割机', status: '待机', area: '0.0亩', fuel: '92%', speed: '0.0km/h', loc: '机库' },
           ].map((item, i) => (
             <div key={i} className="p-3 rounded-lg border border-border-main bg-bg-panel/50 hover:border-accent-main transition-colors cursor-pointer group">
@@ -169,10 +169,10 @@ export const MachineManagementPage: React.FC<MachineManagementPageProps> = ({ ac
     <div className="space-y-6">
       <div className="grid grid-cols-4 gap-4">
         {[
-          { label: '农机总数', value: '12', unit: '台', icon: <Truck className="text-accent-main" /> },
-          { label: '作业中', value: '5', unit: '台', icon: <Activity className="text-accent-green" /> },
-          { label: '待保养', value: '2', unit: '台', icon: <Clock className="text-accent-yellow" /> },
-          { label: '故障停机', value: '1', unit: '台', icon: <AlertCircle className="text-accent-red" /> },
+          { label: '农机总数', value: '6', unit: '台', icon: <Truck className="text-accent-main" /> },
+          { label: '巡检/植保无人机', value: '2', unit: '台', icon: <Activity className="text-accent-green" /> },
+          { label: '无人收割机', value: '1', unit: '台', icon: <Clock className="text-accent-yellow" /> },
+          { label: '调播机', value: '3', unit: '台', icon: <AlertCircle className="text-accent-red" /> },
         ].map((item, i) => (
           <div key={i} className="kpi-card flex justify-between items-center">
             <div>
@@ -277,10 +277,10 @@ export const MachineManagementPage: React.FC<MachineManagementPageProps> = ({ ac
             </thead>
             <tbody className="divide-y divide-border-main/20">
               {[
-                { id: 'MT-20260402-01', name: '西河村A区插秧作业', mach: 'XZ-001', mode: '往复式', progress: 82, status: '执行中' },
-                { id: 'MT-20260402-02', name: '孙汪村2号地植保喷洒', mach: 'XZ-007', mode: '全覆盖', progress: 60, status: '执行中' },
-                { id: 'MT-20260401-05', name: '辛榨社区小麦收割', mach: 'XZ-003', mode: '螺旋式', progress: 100, status: '已完成' },
-                { id: 'MT-20260403-01', name: '张付村土地平整', mach: 'XZ-005', mode: '对角线', progress: 0, status: '待下发' },
+                { id: 'MT-20260402-01', name: '下陈塆村A区插秧作业', mach: 'XZ-001', mode: '往复式', progress: 82, status: '执行中' },
+                { id: 'MT-20260402-02', name: '下陈塆村2号地植保喷洒', mach: 'XZ-007', mode: '全覆盖', progress: 60, status: '执行中' },
+                { id: 'MT-20260401-05', name: '下陈塆村小麦收割', mach: 'XZ-003', mode: '螺旋式', progress: 100, status: '已完成' },
+                { id: 'MT-20260403-01', name: '下陈塆村土地平整', mach: 'XZ-005', mode: '对角线', progress: 0, status: '待下发' },
               ].map((task, i) => (
                 <tr key={i} className="hover:bg-accent-main/5 text-text-secondary group transition-colors">
                   <td className="p-3 font-mono">{task.id}</td>

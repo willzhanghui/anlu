@@ -64,8 +64,8 @@ const TopNav = ({ activeModule, onModuleChange }: { activeModule: ModuleType, on
       <div className="flex items-center gap-3">
         <div className="w-9 h-9 bg-linear-to-br from-accent-main to-blue-600 rounded-lg flex items-center justify-center text-lg shadow-[0_0_15px_rgba(0,212,255,0.3)]">🌾</div>
         <div>
-          <div className="text-base font-bold text-accent-main tracking-wider">安陆市高标准农田信息化综合管理平台</div>
-          <div className="text-[10px] text-text-secondary">辛榨乡智慧农业数字化管理系统 · 孝感市农业农村局</div>
+          <div className="text-base font-bold text-accent-main tracking-wider">安陆市智慧高标准农田试点项目</div>
+          <div className="text-[10px] text-text-secondary">辛榨乡下陈塆村 · 生产智能化 · 管理数字化</div>
         </div>
       </div>
       
@@ -147,12 +147,11 @@ const Ticker = () => (
       className="inline-block"
     >
       📡 实时推送：&nbsp;&nbsp;
-      【气象预警】辛榨乡今日14:00-18:00预计有中雨，当前降雨量6.8mm &nbsp;|&nbsp;
-      【农机状态】无人插秧机 XZ-003 已完成西河村B区作业，累计面积112亩 &nbsp;|&nbsp;
-      【病虫害】孙汪村2号地块纹枯病风险等级升至橙色，建议喷施井冈霉素 &nbsp;|&nbsp;
-      【设备告警】土壤墒情传感器 SM-07 (西河村C区) 电量低于15%，请及时更换 &nbsp;|&nbsp;
-      【产量更新】2025年春季批次累计产量 1,254 吨，较去年同期增长 8.3% &nbsp;|&nbsp;
-      【系统公告】平台数据更新完成，本次同步 23 项遥感影像数据
+      【项目概况】安陆市辛榨乡下陈塆村智慧农田试点项目，总投资824万元，核心区500亩已全面完工 &nbsp;|&nbsp;
+      【农机动态】巡检无人机、植保无人机、无人收割机及3台调播机已全部入库并完成调试 &nbsp;|&nbsp;
+      【物联网】15套土壤墒情监测站及10套管式墒情仪实时回传数据，当前土壤湿度68% &nbsp;|&nbsp;
+      【建设成效】预计粮食产能提升15%-20%，节水效率达30%以上，机械化作业率提升至85% &nbsp;|&nbsp;
+      【系统公告】智慧农田集成云服务器租赁3台已上线，软硬件调试完成
     </motion.div>
   </div>
 );

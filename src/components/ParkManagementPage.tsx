@@ -16,10 +16,10 @@ export const ParkManagementPage: React.FC<ParkManagementPageProps> = ({ activeIt
   // --- 1. 园区概览 (Overview) ---
   const OverviewContent = () => {
     const kpis = [
-      { label: '园区总面积', value: '2.0', unit: '万亩', icon: <MapIcon className="text-accent-main" /> },
-      { label: '在种面积', value: '1.86', unit: '万亩', icon: <Sprout className="text-accent-green" /> },
-      { label: '核心地块', value: '348', unit: '块', icon: <Grid3X3 className="text-accent-yellow" /> },
-      { label: '产值预估', value: '4,820', unit: '万元', icon: <Info className="text-accent-main" /> },
+      { label: '智慧农田核心区', value: '500', unit: '亩', icon: <MapIcon className="text-accent-main" /> },
+      { label: '辐射带动区', value: '2000', unit: '亩', icon: <Sprout className="text-accent-green" /> },
+      { label: '物联网监测站', value: '25', unit: '套', icon: <Grid3X3 className="text-accent-yellow" /> },
+      { label: '智能控制水闸', value: '25', unit: '套', icon: <Info className="text-accent-main" /> },
     ];
 
     const yieldTrend = [
@@ -67,16 +67,16 @@ export const ParkManagementPage: React.FC<ParkManagementPageProps> = ({ activeIt
             </div>
           </div>
           <div className="panel p-4">
-            <div className="panel-header mb-4"><div className="panel-title">核心地块权属分布</div></div>
+            <div className="panel-header mb-4"><div className="panel-title">基础设施建设概况</div></div>
             <div className="space-y-4">
-              {['西河村 (4,200亩)', '孙汪村 (3,100亩)', '辛榨社区 (3,600亩)', '张付村 (2,800亩)'].map((village, i) => (
+              {['坑塘整治 (11口)', '渠道硬化 (300m)', '塘堤加固 (579m)', '新建泵站 (1座)'].map((item, i) => (
                 <div key={i} className="space-y-1">
                   <div className="flex justify-between text-xs">
-                    <span className="text-text-secondary">{village}</span>
-                    <span className="text-accent-main">已确权 100%</span>
+                    <span className="text-text-secondary">{item}</span>
+                    <span className="text-accent-main">建设完成 100%</span>
                   </div>
                   <div className="h-1.5 bg-border-main rounded-full overflow-hidden">
-                    <div className="h-full bg-accent-main" style={{ width: `${100 - i * 5}%` }} />
+                    <div className="h-full bg-accent-main" style={{ width: '100%' }} />
                   </div>
                 </div>
               ))}
@@ -100,13 +100,13 @@ export const ParkManagementPage: React.FC<ParkManagementPageProps> = ({ activeIt
         </div>
         <div className="w-full h-full bg-bg-deep flex items-center justify-center">
           <svg className="w-full h-full max-h-[500px]" viewBox="0 0 500 300">
-            {[
-              { p: "50,50 150,40 180,100 120,130 40,120", id: "西河-01", area: "120亩", crop: "水稻" },
-              { p: "160,45 280,35 300,90 220,120 170,100", id: "孙汪-02", area: "240亩", crop: "水稻" },
-              { p: "290,40 400,50 420,110 330,130 290,100", id: "辛榨-05", area: "180亩", crop: "小麦" },
-              { p: "60,140 160,135 180,200 110,220 50,190", id: "张付-03", area: "150亩", crop: "油菜" },
-              { p: "190,130 300,125 320,210 210,230 175,200", id: "四报-01", area: "310亩", crop: "水稻" },
-            ].map((field, i) => (
+              {[
+                { p: "50,50 150,40 180,100 120,130 40,120", id: "下陈塆-01", area: "120亩", crop: "水稻" },
+                { p: "160,45 280,35 300,90 220,120 170,100", id: "下陈塆-02", area: "240亩", crop: "水稻" },
+                { p: "290,40 400,50 420,110 330,130 290,100", id: "下陈塆-05", area: "180亩", crop: "小麦" },
+                { p: "60,140 160,135 180,200 110,220 50,190", id: "辐射区-03", area: "150亩", crop: "油菜" },
+                { p: "190,130 300,125 320,210 210,230 175,200", id: "辐射区-01", area: "310亩", crop: "水稻" },
+              ].map((field, i) => (
               <motion.polygon 
                 key={i}
                 points={field.p}
